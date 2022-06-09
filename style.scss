@@ -1,0 +1,131 @@
+$font-size-basic-text: 12px;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  max-width: 55rem;
+  margin: 1rem auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  .header_logo {
+    width: 3rem;
+  }
+  nav a {
+    text-decoration: none;
+    margin-right: 2rem;
+    color: black;
+    &:last-of-type {
+      margin-right: 0;
+      color: red;
+    }
+  }
+}
+.top-box {
+  display: flex;
+  .top-left {
+    * {
+      margin: 1rem 0;
+    }
+    margin: 3rem 0;
+    flex: 1;
+    .pre-title {
+      color: red;
+      font-weight: 600;
+      font-size: $font-size-basic-text;
+    }
+    .title {
+      font-weight: 900;
+      font-size: 3rem;
+    }
+    .descr {
+      font-size: $font-size-basic-text;
+    }
+    .top-button {
+      border: none;
+      display: inline-block;
+      border-radius: 99px;
+      color: black;
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+      padding: 17px 35px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .top-button:before,
+    .top-button:after {
+      content: " ";
+      position: absolute;
+      border-radius: 99px;
+    }
+    .top-button:before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -2;
+      background: linear-gradient(
+        66deg,
+        rgba(248, 0, 255, 0.804359243697479) 0%,
+        rgba(245, 98, 0, 0.804359243697479) 35%,
+        rgba(129, 255, 0, 0.7959558823529411) 100%
+      );
+    }
+    .top-button:after {
+      top: 2px;
+      bottom: 2px;
+      left: 2px;
+      right: 2px;
+      background-color: white;
+      z-index: -1;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    .top-button:hover:after {
+      opacity: 0;
+      color: white;
+    }
+  }
+  .top-right {
+    flex: 1;
+    text-align: center;
+    margin: 3rem 0;
+    img {
+      height: 20rem;
+    }
+  }
+}
+.second-box {
+  border-radius: 10px;
+  background: linear-gradient(
+    66deg,
+    rgba(248, 0, 255, 0.804359243697479) 0%,
+    rgba(245, 98, 0, 0.804359243697479) 35%,
+    rgba(129, 255, 0, 0.7959558823529411) 100%
+  );
+  padding: 4rem 1rem 1rem;
+}
+.scroll {
+  display: flex;
+  overflow-x: scroll;
+  .item {
+    width: 25%;
+    margin: 1rem 0.5rem;
+    background-color: rgb(179, 179, 179);
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
